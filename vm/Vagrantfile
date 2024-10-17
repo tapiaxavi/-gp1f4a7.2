@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
     v.memory = 2048
     v.cpus = 2
     v.customize ['modifyvm', :id, '--clipboard', 'bidirectional']  
-    config.vm.synced_folder "../codi" "/var/www/html"
+    config.vm.synced_folder "../codi", "/var/www/html"
   end
 
   config.vm.network "public_network" # Per treballar amb adaptador pont
